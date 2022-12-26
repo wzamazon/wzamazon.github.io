@@ -136,18 +136,18 @@ Related Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Packet entry. </p>
-<p ><a class="el" href="structrxr__pkt__entry.html" title="Packet entry.">rxr_pkt_entry</a> plays a centrol role how EFA provider interacts with EFA device and SHM</p>
-<p >First, it is used as the context of the request EFA provider posted to EFA device and SHM.</p>
+<p ><a class="el" href="structrxr__pkt__entry.html" title="Packet entry.">rxr_pkt_entry</a> is used the following occassions:</p>
+<p >First, it is used as the context of the request EFA provider posted to EFA device and SHM:</p>
 <p >For each request EFA provider submits to (EFA device or SHM), it will allocate a packet entry.</p>
-<p >When the request was submitted, the pointer of the packet entry will be used as context. (For EFA device, context is work request ID. For shm).</p>
+<p >When the request was submitted, the pointer of the packet entry will be used as context. For EFA device, context is work request ID (<code>wr_id</code>), For SHM, context is the <code>op_context</code> in a <code>fi_msg</code>.</p>
 <p >When the request was completed, EFA device or SHM will return a completion entry, with the the pointer to the <a class="el" href="structrxr__pkt__entry.html" title="Packet entry.">rxr_pkt_entry</a> in it.</p>
-<p >When a request encounter Receiver Not Ready (RNR) error, the packet entry will be queued and resubmitted. Therefore it must contain all the information of the request (for the resubmission).</p>
+<p >In a specail occasion, he completion can be a Receiver Not Ready (RNR) error completion. In that case the packet entry will be queued and resubmitted. For the resubmission, Therefore it must contain all the information of the request.</p>
 <p >An operation can be either a TX operation or a receive (RX) operation</p>
 <p >For EFA device, a TX operation can be send/read.</p>
 <p >For SHM, a TX operation can be send/read/write/atomic.</p>
-<p >When used as context of request, packet was allocated from endpoint's shm/efa_tx/rx_pool. When used by a request to EFA device, the packet's memory must be registered to EFA device, and the memory registration must be stored as the <code>mr</code> field of ta</p>
-<p >Second, new packet entries will be allocated to save received packet entries that is unexpected or out-of-order. This is because the efa/shm_rx_pkt_pool's size is fixed, and cannot be used to hold unexpected/out-of-order packets. In this case, a packet entry will be cloned from unexpected/ooo_pkt_pool, and the memory of new packet entry is not registered. The old one will be released.</p>
-<p >Finally, new packet entries can be allocated to support local read. Local read is used to copy data from a packet entry to HMEM receive buffer through EFA device's read capability. If the packet entry's memory is not registered (unexpected or out-of-order). A new packet entry will be cloned using endpoint's read_copy_pkt_pool, whose memory was registered. </p>
+<p >When used as context of request, packet was allocated from endpoint's shm/efa_tx/rx_pool. When the request is to EFA device, the packet's memory must be registered to EFA device, and the memory registration must be stored as the <code>mr</code> field of packet entry.</p>
+<p >Second, packet entries can be used o store received packet entries that is unexpected or out-of-order. This is because the efa/shm_rx_pkt_pool's size is fixed, therefore cannot be used to hold unexpected/out-of-order packets. When an unexpected/out-of-order packet is received, a new packet entry will be cloned from unexpected/ooo_pkt_pool. The old packet will be released then reposted to device. The new packet's memory is not registered</p>
+<p >Finally, packet entries can be used to support local read copy. Local read copy means to copy data from a packet entry to HMEM receive buffer through EFA device's read capability. Local require a packet entry's memory to be registered with device. If the packet entry's memory is not registered (when it is unexpected or out-of-order). A new packet entry will be cloned using endpoint's read_copy_pkt_pool, whose memory was registered. </p>
 </div><h2 class="groupheader">Friends And Related Function Documentation</h2>
 <a id="ab137b239d93a9e15736b0b6c4eaf9f3e" name="ab137b239d93a9e15736b0b6c4eaf9f3e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab137b239d93a9e15736b0b6c4eaf9f3e">&#9670;&#160;</a></span>rxr_pkt_entry_alloc()</h2>
