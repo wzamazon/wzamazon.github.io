@@ -85,13 +85,12 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:add406809dcb982ddc9f69ca0a49bd6e1"><td class="memItemLeft" align="right" valign="top">struct dlist_entry&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrxr__pkt__entry.html#add406809dcb982ddc9f69ca0a49bd6e1">entry</a></td></tr>
-<tr class="memdesc:add406809dcb982ddc9f69ca0a49bd6e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">entry to the linked list of outstanding/queued packet entries  <a href="structrxr__pkt__entry.html#add406809dcb982ddc9f69ca0a49bd6e1">More...</a><br /></td></tr>
 <tr class="separator:add406809dcb982ddc9f69ca0a49bd6e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae026c3ad792306e45c49b8e6bbca8ab9"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrxr__pkt__entry.html#ae026c3ad792306e45c49b8e6bbca8ab9">x_entry</a></td></tr>
-<tr class="memdesc:ae026c3ad792306e45c49b8e6bbca8ab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer to <a class="el" href="structrxr__op__entry.html">rxr_op_entry</a>  <a href="structrxr__pkt__entry.html#ae026c3ad792306e45c49b8e6bbca8ab9">More...</a><br /></td></tr>
+<tr class="memdesc:ae026c3ad792306e45c49b8e6bbca8ab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer to <a class="el" href="structrxr__op__entry.html">rxr_op_entry</a> or <a class="el" href="structrxr__read__entry.html">rxr_read_entry</a>  <a href="structrxr__pkt__entry.html#ae026c3ad792306e45c49b8e6bbca8ab9">More...</a><br /></td></tr>
 <tr class="separator:ae026c3ad792306e45c49b8e6bbca8ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a269859dd966decb98fc837f56fa22363"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrxr__pkt__entry.html#a269859dd966decb98fc837f56fa22363">pkt_size</a></td></tr>
-<tr class="memdesc:a269859dd966decb98fc837f56fa22363"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of bytes sent over wire  <a href="structrxr__pkt__entry.html#a269859dd966decb98fc837f56fa22363">More...</a><br /></td></tr>
+<tr class="memdesc:a269859dd966decb98fc837f56fa22363"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of bytes sent/received over wire  <a href="structrxr__pkt__entry.html#a269859dd966decb98fc837f56fa22363">More...</a><br /></td></tr>
 <tr class="separator:a269859dd966decb98fc837f56fa22363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a087489fc89b66394039db955fed09db3"><td class="memItemLeft" align="right" valign="top">struct fid_mr *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrxr__pkt__entry.html#a087489fc89b66394039db955fed09db3">mr</a></td></tr>
 <tr class="memdesc:a087489fc89b66394039db955fed09db3"><td class="mdescLeft">&#160;</td><td class="mdescRight">memory registration  <a href="structrxr__pkt__entry.html#a087489fc89b66394039db955fed09db3">More...</a><br /></td></tr>
@@ -103,7 +102,7 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a653ea9c9b8f5ef65e3bd2c88428a295e"><td class="mdescLeft">&#160;</td><td class="mdescRight">indicate where the memory of this packet entry reside  <a href="structrxr__pkt__entry.html#a653ea9c9b8f5ef65e3bd2c88428a295e">More...</a><br /></td></tr>
 <tr class="separator:a653ea9c9b8f5ef65e3bd2c88428a295e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ba837b763801bee7739572bd8711ae8"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrxr__pkt__entry.html#a0ba837b763801bee7739572bd8711ae8">flags</a></td></tr>
-<tr class="memdesc:a0ba837b763801bee7739572bd8711ae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">RXR_PKT_ENTRY flags.  <a href="structrxr__pkt__entry.html#a0ba837b763801bee7739572bd8711ae8">More...</a><br /></td></tr>
+<tr class="memdesc:a0ba837b763801bee7739572bd8711ae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">flags indicating the status of the packet entry  <a href="structrxr__pkt__entry.html#a0ba837b763801bee7739572bd8711ae8">More...</a><br /></td></tr>
 <tr class="separator:a0ba837b763801bee7739572bd8711ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c24e463479252740d37f72640dd5fc2"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrxr__pkt__entry.html#a3c24e463479252740d37f72640dd5fc2">next</a></td></tr>
 <tr class="memdesc:a3c24e463479252740d37f72640dd5fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">link multiple MEDIUM RTM with same message ID together  <a href="structrxr__pkt__entry.html#a3c24e463479252740d37f72640dd5fc2">More...</a><br /></td></tr>
@@ -137,7 +136,18 @@ Related Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Packet entry. </p>
-<p ><a class="el" href="structrxr__pkt__entry.html" title="Packet entry.">rxr_pkt_entry</a> is used both for sending data to and receiving data from a peer. </p>
+<p ><a class="el" href="structrxr__pkt__entry.html" title="Packet entry.">rxr_pkt_entry</a> plays a centrol role how EFA provider interacts with EFA device and SHM</p>
+<p >First, it is used as the context of the request EFA provider posted to EFA device and SHM.</p>
+<p >For each request EFA provider submits to (EFA device or SHM), it will allocate a packet entry.</p>
+<p >When the request was submitted, the pointer of the packet entry will be used as context. (For EFA device, context is work request ID. For shm).</p>
+<p >When the request was completed, EFA device or SHM will return a completion entry, with the the pointer to the <a class="el" href="structrxr__pkt__entry.html" title="Packet entry.">rxr_pkt_entry</a> in it.</p>
+<p >When a request encounter Receiver Not Ready (RNR) error, the packet entry will be queued and resubmitted. Therefore it must contain all the information of the request (for the resubmission).</p>
+<p >An operation can be either a TX operation or a receive (RX) operation</p>
+<p >For EFA device, a TX operation can be send/read.</p>
+<p >For SHM, a TX operation can be send/read/write/atomic.</p>
+<p >When used as context of request, packet was allocated from endpoint's shm/efa_tx/rx_pool. When used by a request to EFA device, the packet's memory must be registered to EFA device, and the memory registration must be stored as the <code>mr</code> field of ta</p>
+<p >Second, new packet entries will be allocated to save received packet entries that is unexpected or out-of-order. This is because the efa/shm_rx_pkt_pool's size is fixed, and cannot be used to hold unexpected/out-of-order packets. In this case, a packet entry will be cloned from unexpected/ooo_pkt_pool, and the memory of new packet entry is not registered. The old one will be released.</p>
+<p >Finally, new packet entries can be allocated to support local read. Local read is used to copy data from a packet entry to HMEM receive buffer through EFA device's read capability. If the packet entry's memory is not registered (unexpected or out-of-order). A new packet entry will be cloned using endpoint's read_copy_pkt_pool, whose memory was registered. </p>
 </div><h2 class="groupheader">Friends And Related Function Documentation</h2>
 <a id="ab137b239d93a9e15736b0b6c4eaf9f3e" name="ab137b239d93a9e15736b0b6c4eaf9f3e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab137b239d93a9e15736b0b6c4eaf9f3e">&#9670;&#160;</a></span>rxr_pkt_entry_alloc()</h2>
@@ -188,8 +198,7 @@ Related Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>on success return pointer of the allocated packet entry. on failure return NULL <br  />
- </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>on success return pointer of the allocated packet entry. on failure return NULL </dd></dl>
 
 </div>
 </div>
@@ -431,9 +440,8 @@ Related Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>entry to the linked list of outstanding/queued packet entries </p>
-<p ><code>entry</code> is used for sending only. It is either linked peer-&gt;outstanding_tx_pkts (after a packet has been successfully sent, but it get a completion), or linked to tx_rx_entry-&gt;queued_pkts (after it encountered RNR error completion). </p>
+<p >entry to the linked list of outstanding/queued packet entries</p>
+<p ><code>entry</code> is used for sending only. It is either linked to <code>peer-&gt;outstanding_tx_pkts</code> (after a packet has been successfully sent, but it get a completion), or linked to <code>op_entry-&gt;queued_pkts</code> (after it encountered RNR error completion). </p>
 
 </div>
 </div>
@@ -449,7 +457,8 @@ Related Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>RXR_PKT_ENTRY flags. </p>
+<p>flags indicating the status of the packet entry </p>
+<p >Possisle flags include <a class="el" href="rxr__pkt__entry_8h.html#a18d01561c6abb920fe65e93756aa7b71">RXR_PKT_ENTRY_IN_USE</a> <a class="el" href="rxr__pkt__entry_8h.html#a0914124572ca34f05dfd42c84383945e">RXR_PKT_ENTRY_RNR_RETRANSMIT</a> and <a class="el" href="rxr__pkt__entry_8h.html#a4354880df2e225592b242ecc160d9e13">RXR_PKT_ENTRY_LOCAL_READ</a> </p>
 
 </div>
 </div>
@@ -500,7 +509,7 @@ Related Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>number of bytes sent over wire </p>
+<p>number of bytes sent/received over wire </p>
 
 </div>
 </div>
@@ -548,7 +557,7 @@ Related Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>pointer to <a class="el" href="structrxr__op__entry.html">rxr_op_entry</a> </p>
+<p>pointer to <a class="el" href="structrxr__op__entry.html">rxr_op_entry</a> or <a class="el" href="structrxr__read__entry.html">rxr_read_entry</a> </p>
 
 </div>
 </div>

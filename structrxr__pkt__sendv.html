@@ -81,6 +81,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:afc524e778df7ad99677e1c1827899558"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrxr__pkt__sendv.html#afc524e778df7ad99677e1c1827899558">iov_count</a></td></tr>
+<tr class="memdesc:afc524e778df7ad99677e1c1827899558"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of iovec to be passed to device and sent over wire  <a href="structrxr__pkt__sendv.html#afc524e778df7ad99677e1c1827899558">More...</a><br /></td></tr>
 <tr class="separator:afc524e778df7ad99677e1c1827899558"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4edebd955b972b7637ec685e84e4aee"><td class="memItemLeft" align="right" valign="top">struct iovec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrxr__pkt__sendv.html#aa4edebd955b972b7637ec685e84e4aee">iov</a> [2]</td></tr>
 <tr class="separator:aa4edebd955b972b7637ec685e84e4aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,6 +128,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>number of iovec to be passed to device and sent over wire </p>
+<p >Because core EP current only support 2 iov, and for the sake of code simplicity, we use 2 iov. One for header, and the other for data. iov_count here is used as an indication of whether iov is used, it is either 0 or 2. </p>
 
 </div>
 </div>

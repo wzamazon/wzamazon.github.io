@@ -104,7 +104,7 @@ Macros</h2></td></tr>
 <tr class="separator:a18d01561c6abb920fe65e93756aa7b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0914124572ca34f05dfd42c84383945e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rxr__pkt__entry_8h.html#a0914124572ca34f05dfd42c84383945e">RXR_PKT_ENTRY_RNR_RETRANSMIT</a>&#160;&#160;&#160;BIT_ULL(1)</td></tr>
 <tr class="separator:a0914124572ca34f05dfd42c84383945e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4354880df2e225592b242ecc160d9e13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rxr__pkt__entry_8h.html#a4354880df2e225592b242ecc160d9e13">RXR_PKT_ENTRY_LOCAL_READ</a>&#160;&#160;&#160;BIT_ULL(2) /* this packet entry is used as context of a local read operation */</td></tr>
+<tr class="memitem:a4354880df2e225592b242ecc160d9e13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rxr__pkt__entry_8h.html#a4354880df2e225592b242ecc160d9e13">RXR_PKT_ENTRY_LOCAL_READ</a>&#160;&#160;&#160;BIT_ULL(2)</td></tr>
 <tr class="separator:a4354880df2e225592b242ecc160d9e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
@@ -170,6 +170,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >this packet entry is being used </p>
 
 </div>
 </div>
@@ -180,10 +181,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RXR_PKT_ENTRY_LOCAL_READ&#160;&#160;&#160;BIT_ULL(2) /* this packet entry is used as context of a local read operation */</td>
+          <td class="memname">#define RXR_PKT_ENTRY_LOCAL_READ&#160;&#160;&#160;BIT_ULL(2)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >this packet entry is used as context of a local read operation </p>
 
 </div>
 </div>
@@ -198,6 +200,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >this packet entry encountered RNR and is being retransmitted </p>
 
 </div>
 </div>
@@ -214,17 +217,22 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846fa36070ac8a6aad13fc6a8fe741faa1179" name="a5bfee5499517616bc20acfaaaa58846fa36070ac8a6aad13fc6a8fe741faa1179"></a>RXR_PKT_FROM_EFA_TX_POOL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846fa9dc444d1b39b17761d62f1d220054908" name="a5bfee5499517616bc20acfaaaa58846fa9dc444d1b39b17761d62f1d220054908"></a>RXR_PKT_FROM_EFA_RX_POOL&#160;</td><td class="fielddoc"><p >packet is allocated from ep-&gt;efa_tx_pkt_pool </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846fa36070ac8a6aad13fc6a8fe741faa1179" name="a5bfee5499517616bc20acfaaaa58846fa36070ac8a6aad13fc6a8fe741faa1179"></a>RXR_PKT_FROM_EFA_TX_POOL&#160;</td><td class="fielddoc"><p >packet is allocated from <code>ep-&gt;efa_tx_pkt_pool</code> </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846faf4148a5ddf9763f11bdea3552826f9c1" name="a5bfee5499517616bc20acfaaaa58846faf4148a5ddf9763f11bdea3552826f9c1"></a>RXR_PKT_FROM_SHM_TX_POOL&#160;</td><td class="fielddoc"><p >packet is allocated from ep-&gt;efa_rx_pkt_pool </p>
+<tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846fa9dc444d1b39b17761d62f1d220054908" name="a5bfee5499517616bc20acfaaaa58846fa9dc444d1b39b17761d62f1d220054908"></a>RXR_PKT_FROM_EFA_RX_POOL&#160;</td><td class="fielddoc"><p >packet is allocated from <code>ep-&gt;efa_rx_pkt_pool</code> </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846fa57cf9c83646379ec6f7249500d383a44" name="a5bfee5499517616bc20acfaaaa58846fa57cf9c83646379ec6f7249500d383a44"></a>RXR_PKT_FROM_SHM_RX_POOL&#160;</td><td class="fielddoc"><p >packet is allocated from ep-&gt;shm_tx_pkt_pool </p>
+<tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846faf4148a5ddf9763f11bdea3552826f9c1" name="a5bfee5499517616bc20acfaaaa58846faf4148a5ddf9763f11bdea3552826f9c1"></a>RXR_PKT_FROM_SHM_TX_POOL&#160;</td><td class="fielddoc"><p >packet is allocated from <code>ep-&gt;shm_tx_pkt_pool</code> </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846fa66bfe07e739262e533f3e7948c2c74fa" name="a5bfee5499517616bc20acfaaaa58846fa66bfe07e739262e533f3e7948c2c74fa"></a>RXR_PKT_FROM_UNEXP_POOL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846fa0dd2232f452131c0af46971bb9de5408" name="a5bfee5499517616bc20acfaaaa58846fa0dd2232f452131c0af46971bb9de5408"></a>RXR_PKT_FROM_OOO_POOL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846fa210db094ea7afbcff4752f439dcef0ab" name="a5bfee5499517616bc20acfaaaa58846fa210db094ea7afbcff4752f439dcef0ab"></a>RXR_PKT_FROM_USER_BUFFER&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846faf44352d5b71a7618b56f75e6660b9438" name="a5bfee5499517616bc20acfaaaa58846faf44352d5b71a7618b56f75e6660b9438"></a>RXR_PKT_FROM_READ_COPY_POOL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846fa57cf9c83646379ec6f7249500d383a44" name="a5bfee5499517616bc20acfaaaa58846fa57cf9c83646379ec6f7249500d383a44"></a>RXR_PKT_FROM_SHM_RX_POOL&#160;</td><td class="fielddoc"><p >packet is allocated from <code>ep-&gt;shm_rx_pkt_pool</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846fa66bfe07e739262e533f3e7948c2c74fa" name="a5bfee5499517616bc20acfaaaa58846fa66bfe07e739262e533f3e7948c2c74fa"></a>RXR_PKT_FROM_UNEXP_POOL&#160;</td><td class="fielddoc"><p >packet is allocated from <code>ep-&gt;rx_unexp_pkt_pool</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846fa0dd2232f452131c0af46971bb9de5408" name="a5bfee5499517616bc20acfaaaa58846fa0dd2232f452131c0af46971bb9de5408"></a>RXR_PKT_FROM_OOO_POOL&#160;</td><td class="fielddoc"><p >packet is allocated from e<code>p-&gt;rx_ooo_pkt_pool</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846fa210db094ea7afbcff4752f439dcef0ab" name="a5bfee5499517616bc20acfaaaa58846fa210db094ea7afbcff4752f439dcef0ab"></a>RXR_PKT_FROM_USER_BUFFER&#160;</td><td class="fielddoc"><p >packet is from user provided buffer` </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846faf44352d5b71a7618b56f75e6660b9438" name="a5bfee5499517616bc20acfaaaa58846faf44352d5b71a7618b56f75e6660b9438"></a>RXR_PKT_FROM_READ_COPY_POOL&#160;</td><td class="fielddoc"><p >packet is allocated from <code>ep-&gt;rx_readcopy_pkt_pool</code> </p>
+</td></tr>
 </table>
 
 </div>
