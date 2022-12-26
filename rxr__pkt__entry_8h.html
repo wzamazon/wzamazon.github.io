@@ -90,6 +90,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrxr__pkt__sendv.html">rxr_pkt_sendv</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packet entry.  <a href="structrxr__pkt__entry.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrxr__pkt__rx__key.html">rxr_pkt_rx_key</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,9 +212,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846fa36070ac8a6aad13fc6a8fe741faa1179" name="a5bfee5499517616bc20acfaaaa58846fa36070ac8a6aad13fc6a8fe741faa1179"></a>RXR_PKT_FROM_EFA_TX_POOL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846fa9dc444d1b39b17761d62f1d220054908" name="a5bfee5499517616bc20acfaaaa58846fa9dc444d1b39b17761d62f1d220054908"></a>RXR_PKT_FROM_EFA_RX_POOL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846faf4148a5ddf9763f11bdea3552826f9c1" name="a5bfee5499517616bc20acfaaaa58846faf4148a5ddf9763f11bdea3552826f9c1"></a>RXR_PKT_FROM_SHM_TX_POOL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846fa57cf9c83646379ec6f7249500d383a44" name="a5bfee5499517616bc20acfaaaa58846fa57cf9c83646379ec6f7249500d383a44"></a>RXR_PKT_FROM_SHM_RX_POOL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846fa9dc444d1b39b17761d62f1d220054908" name="a5bfee5499517616bc20acfaaaa58846fa9dc444d1b39b17761d62f1d220054908"></a>RXR_PKT_FROM_EFA_RX_POOL&#160;</td><td class="fielddoc"><p >packet is allocated from ep-&gt;efa_tx_pkt_pool </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846faf4148a5ddf9763f11bdea3552826f9c1" name="a5bfee5499517616bc20acfaaaa58846faf4148a5ddf9763f11bdea3552826f9c1"></a>RXR_PKT_FROM_SHM_TX_POOL&#160;</td><td class="fielddoc"><p >packet is allocated from ep-&gt;efa_rx_pkt_pool </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846fa57cf9c83646379ec6f7249500d383a44" name="a5bfee5499517616bc20acfaaaa58846fa57cf9c83646379ec6f7249500d383a44"></a>RXR_PKT_FROM_SHM_RX_POOL&#160;</td><td class="fielddoc"><p >packet is allocated from ep-&gt;shm_tx_pkt_pool </p>
+</td></tr>
 <tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846fa66bfe07e739262e533f3e7948c2c74fa" name="a5bfee5499517616bc20acfaaaa58846fa66bfe07e739262e533f3e7948c2c74fa"></a>RXR_PKT_FROM_UNEXP_POOL&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846fa0dd2232f452131c0af46971bb9de5408" name="a5bfee5499517616bc20acfaaaa58846fa0dd2232f452131c0af46971bb9de5408"></a>RXR_PKT_FROM_OOO_POOL&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a5bfee5499517616bc20acfaaaa58846fa210db094ea7afbcff4752f439dcef0ab" name="a5bfee5499517616bc20acfaaaa58846fa210db094ea7afbcff4752f439dcef0ab"></a>RXR_PKT_FROM_USER_BUFFER&#160;</td><td class="fielddoc"></td></tr>

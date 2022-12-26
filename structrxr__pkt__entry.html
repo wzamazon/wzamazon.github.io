@@ -76,6 +76,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Packet entry.  
+ <a href="structrxr__pkt__entry.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="rxr__pkt__entry_8h_source.html">rxr_pkt_entry.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -89,6 +92,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a087489fc89b66394039db955fed09db3"><td class="memItemLeft" align="right" valign="top">struct fid_mr *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrxr__pkt__entry.html#a087489fc89b66394039db955fed09db3">mr</a></td></tr>
 <tr class="separator:a087489fc89b66394039db955fed09db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a450e5ec6a0518551f62b1a4e247aeb34"><td class="memItemLeft" align="right" valign="top">fi_addr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrxr__pkt__entry.html#a450e5ec6a0518551f62b1a4e247aeb34">addr</a></td></tr>
+<tr class="memdesc:a450e5ec6a0518551f62b1a4e247aeb34"><td class="mdescLeft">&#160;</td><td class="mdescRight">peer address  <a href="structrxr__pkt__entry.html#a450e5ec6a0518551f62b1a4e247aeb34">More...</a><br /></td></tr>
 <tr class="separator:a450e5ec6a0518551f62b1a4e247aeb34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a653ea9c9b8f5ef65e3bd2c88428a295e"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="rxr__pkt__entry_8h.html#a5bfee5499517616bc20acfaaaa58846f">rxr_pkt_entry_alloc_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrxr__pkt__entry.html#a653ea9c9b8f5ef65e3bd2c88428a295e">alloc_type</a></td></tr>
 <tr class="separator:a653ea9c9b8f5ef65e3bd2c88428a295e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,7 +108,10 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a04ec65d4660060689099a8f94e7be6d3"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrxr__pkt__entry.html#a04ec65d4660060689099a8f94e7be6d3">pkt</a> [0]</td></tr>
 <tr class="separator:a04ec65d4660060689099a8f94e7be6d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Packet entry. </p>
+<p ><a class="el" href="structrxr__pkt__entry.html" title="Packet entry.">rxr_pkt_entry</a> is used both for sending data to and receiving data from a peer. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="adc281e89d5fbad74f401926eccb6e9df" name="adc281e89d5fbad74f401926eccb6e9df"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adc281e89d5fbad74f401926eccb6e9df">&#9670;&#160;</a></span></h2>
 
@@ -116,6 +123,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >next is used on receiving end. send is used on sending end. </p>
 
 </div>
 </div>
@@ -130,6 +138,14 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>peer address </p>
+<p >When sending a packet, <code>addr</code> will be provided by application and it cannot be FI_ADDR_NOTAVAIL. However, after a packet is sent, application can remove a peer by calling fi_av_remove(). When removing the peering, <code>addr</code> will be set to FI_ADDR_NOTAVAIL. Later, when device report completion for such a TX packet, the TX completion will be ignored.</p>
+<p >When receiving a packet, lower device will set <code>addr</code>. If the sender's address is not in address vector (AV), <code>lower device will set</code>addr` to FI_ADDR_NOTAVAIL. This can happen in two scenarios:</p>
+<ol type="1">
+<li>There has been no prior communication with the peer. In this case, the packet should have peer's raw address in the header, and progress engine will insert the raw address into address vector, and update <code>addr</code>.</li>
+<li>This packet is from a peer whose address has been removed from AV. In this case, the recived packet will be ignored because all resources associated with peer has been released. </li>
+</ol>
 
 </div>
 </div>
@@ -158,6 +174,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >entry is used for sending only. It is either linked peer-&gt;outstanding_tx_pkts (after a packet has been successfully sent, but it get a completion), or linked to tx_rx_entry-&gt;queued_pkts (after it encountered RNR error completion). </p>
 
 </div>
 </div>
@@ -172,6 +189,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >where the memory of this packet entry reside </p>
 
 </div>
 </div>
@@ -186,6 +204,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >number of bytes sent over wire memory registration. TODO: use ibv_mr </p>
 
 </div>
 </div>
@@ -228,6 +247,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >pointer to rxr rx/tx entry </p>
 
 </div>
 </div>
