@@ -123,9 +123,10 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="separator:aa79a8da305538a9a886d8f57455fcf15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4000e30bd6e1a2c7e94ba1aaef88d8c8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rxr__op__entry_8h.html#a4000e30bd6e1a2c7e94ba1aaef88d8c8">rxr_cuda_copy_method</a> { <a class="el" href="rxr__op__entry_8h.html#a4000e30bd6e1a2c7e94ba1aaef88d8c8a67e8b63d0e3a7efce8635de0b76e3283">RXR_CUDA_COPY_UNSPEC</a> = 0
-, <a class="el" href="rxr__op__entry_8h.html#a4000e30bd6e1a2c7e94ba1aaef88d8c8a89bf4c7f990c04cd86492224f6419fac">RXR_CUDA_COPY_GDRCOPY</a>
+, <a class="el" href="rxr__op__entry_8h.html#a4000e30bd6e1a2c7e94ba1aaef88d8c8aa226547542b4e11df4c4644e5e3b9449">RXR_CUDA_COPY_BLOCKING</a>
 , <a class="el" href="rxr__op__entry_8h.html#a4000e30bd6e1a2c7e94ba1aaef88d8c8ab1250851b432d13655d5ce829a61ca71">RXR_CUDA_COPY_LOCALREAD</a>
  }</td></tr>
+<tr class="memdesc:a4000e30bd6e1a2c7e94ba1aaef88d8c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">how to copy data from bounce buffer to CUDA receive buffer  <a href="rxr__op__entry_8h.html#a4000e30bd6e1a2c7e94ba1aaef88d8c8">More...</a><br /></td></tr>
 <tr class="separator:a4000e30bd6e1a2c7e94ba1aaef88d8c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -197,10 +198,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>how to copy data from bounce buffer to CUDA receive buffer </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4000e30bd6e1a2c7e94ba1aaef88d8c8a67e8b63d0e3a7efce8635de0b76e3283" name="a4000e30bd6e1a2c7e94ba1aaef88d8c8a67e8b63d0e3a7efce8635de0b76e3283"></a>RXR_CUDA_COPY_UNSPEC&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4000e30bd6e1a2c7e94ba1aaef88d8c8a89bf4c7f990c04cd86492224f6419fac" name="a4000e30bd6e1a2c7e94ba1aaef88d8c8a89bf4c7f990c04cd86492224f6419fac"></a>RXR_CUDA_COPY_GDRCOPY&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4000e30bd6e1a2c7e94ba1aaef88d8c8ab1250851b432d13655d5ce829a61ca71" name="a4000e30bd6e1a2c7e94ba1aaef88d8c8ab1250851b432d13655d5ce829a61ca71"></a>RXR_CUDA_COPY_LOCALREAD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4000e30bd6e1a2c7e94ba1aaef88d8c8aa226547542b4e11df4c4644e5e3b9449" name="a4000e30bd6e1a2c7e94ba1aaef88d8c8aa226547542b4e11df4c4644e5e3b9449"></a>RXR_CUDA_COPY_BLOCKING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4000e30bd6e1a2c7e94ba1aaef88d8c8ab1250851b432d13655d5ce829a61ca71" name="a4000e30bd6e1a2c7e94ba1aaef88d8c8ab1250851b432d13655d5ce829a61ca71"></a>RXR_CUDA_COPY_LOCALREAD&#160;</td><td class="fielddoc"><p >gdrcopy or cudaMemcpy device driven copy by using local RDMA read </p>
+</td></tr>
 </table>
 
 </div>

@@ -85,6 +85,7 @@ $(function() {
 <code>#include &lt;ofi_util.h&gt;</code><br />
 <code>#include &lt;ofi_iov.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="efa_8h_source.html">efa.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="rxr_8h_source.html">rxr.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="rxr__msg_8h_source.html">rxr_msg.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="rxr__rma_8h_source.html">rxr_rma.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="rxr__op__entry_8h_source.html">rxr_op_entry.h</a>&quot;</code><br />
@@ -92,21 +93,13 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a49e1059a0caa4c776270db8743d88f0f"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rxr__pkt__entry_8c.html#a49e1059a0caa4c776270db8743d88f0f">rxr_pkt_entry_alloc</a> (struct <a class="el" href="structrxr__ep.html">rxr_ep</a> *ep, struct ofi_bufpool *pkt_pool, enum <a class="el" href="rxr__pkt__entry_8h.html#a5bfee5499517616bc20acfaaaa58846f">rxr_pkt_entry_alloc_type</a> alloc_type)</td></tr>
-<tr class="separator:a49e1059a0caa4c776270db8743d88f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb38c9887eca025ba25cdbdcdd04d8a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rxr__pkt__entry_8c.html#aeb38c9887eca025ba25cdbdcdd04d8a3">rxr_pkt_entry_release_tx</a> (struct <a class="el" href="structrxr__ep.html">rxr_ep</a> *ep, struct <a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a> *pkt)</td></tr>
-<tr class="memdesc:aeb38c9887eca025ba25cdbdcdd04d8a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">release a TX packet entry  <a href="rxr__pkt__entry_8c.html#aeb38c9887eca025ba25cdbdcdd04d8a3">More...</a><br /></td></tr>
-<tr class="separator:aeb38c9887eca025ba25cdbdcdd04d8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7be10d05cd99b49948b3befaf5e87e35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rxr__pkt__entry_8c.html#a7be10d05cd99b49948b3befaf5e87e35">rxr_pkt_entry_release_rx</a> (struct <a class="el" href="structrxr__ep.html">rxr_ep</a> *ep, struct <a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a> *pkt_entry)</td></tr>
-<tr class="separator:a7be10d05cd99b49948b3befaf5e87e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca82bb131508ec468325f8366403814c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rxr__pkt__entry_8c.html#aca82bb131508ec468325f8366403814c">rxr_pkt_entry_copy</a> (struct <a class="el" href="structrxr__ep.html">rxr_ep</a> *ep, struct <a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a> *dest, struct <a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a> *src)</td></tr>
 <tr class="separator:aca82bb131508ec468325f8366403814c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c635b5d9a8699cc3259855c8645285d"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rxr__pkt__entry_8c.html#a1c635b5d9a8699cc3259855c8645285d">rxr_pkt_get_unexp</a> (struct <a class="el" href="structrxr__ep.html">rxr_ep</a> *ep, struct <a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a> **pkt_entry_ptr)</td></tr>
+<tr class="memdesc:a1c635b5d9a8699cc3259855c8645285d"><td class="mdescLeft">&#160;</td><td class="mdescRight">create a copy of unexpected packet entry  <a href="rxr__pkt__entry_8c.html#a1c635b5d9a8699cc3259855c8645285d">More...</a><br /></td></tr>
 <tr class="separator:a1c635b5d9a8699cc3259855c8645285d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8564415768e9471a5f50d6f56c866bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rxr__pkt__entry_8c.html#af8564415768e9471a5f50d6f56c866bd">rxr_pkt_entry_release_cloned</a> (struct <a class="el" href="structrxr__ep.html">rxr_ep</a> *ep, struct <a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a> *pkt_entry)</td></tr>
 <tr class="separator:af8564415768e9471a5f50d6f56c866bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25a0ac9f9dcbe2895ca149aa01a37633"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rxr__pkt__entry_8c.html#a25a0ac9f9dcbe2895ca149aa01a37633">rxr_pkt_entry_clone</a> (struct <a class="el" href="structrxr__ep.html">rxr_ep</a> *ep, struct ofi_bufpool *pkt_pool, enum <a class="el" href="rxr__pkt__entry_8h.html#a5bfee5499517616bc20acfaaaa58846f">rxr_pkt_entry_alloc_type</a> alloc_type, struct <a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a> *src)</td></tr>
-<tr class="separator:a25a0ac9f9dcbe2895ca149aa01a37633"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16bc9b617e91bf0b67479be0cfd15012"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rxr__pkt__entry_8c.html#a16bc9b617e91bf0b67479be0cfd15012">rxr_pkt_entry_append</a> (struct <a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a> *dst, struct <a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a> *src)</td></tr>
 <tr class="separator:a16bc9b617e91bf0b67479be0cfd15012"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2eff1666a74ea32e6d89c0e6d21c398e"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rxr__pkt__entry_8c.html#a2eff1666a74ea32e6d89c0e6d21c398e">rxr_pkt_entry_send</a> (struct <a class="el" href="structrxr__ep.html">rxr_ep</a> *ep, struct <a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a> *pkt_entry, uint64_t flags)</td></tr>
@@ -122,40 +115,6 @@ Functions</h2></td></tr>
 <tr class="separator:a1126f8da29a37d6b11520442af00d077"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a49e1059a0caa4c776270db8743d88f0f" name="a49e1059a0caa4c776270db8743d88f0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49e1059a0caa4c776270db8743d88f0f">&#9670;&#160;</a></span>rxr_pkt_entry_alloc()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a> * rxr_pkt_entry_alloc </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structrxr__ep.html">rxr_ep</a> *&#160;</td>
-          <td class="paramname"><em>ep</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct ofi_bufpool *&#160;</td>
-          <td class="paramname"><em>pkt_pool</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">enum <a class="el" href="rxr__pkt__entry_8h.html#a5bfee5499517616bc20acfaaaa58846f">rxr_pkt_entry_alloc_type</a>&#160;</td>
-          <td class="paramname"><em>alloc_type</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a16bc9b617e91bf0b67479be0cfd15012" name="a16bc9b617e91bf0b67479be0cfd15012"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a16bc9b617e91bf0b67479be0cfd15012">&#9670;&#160;</a></span>rxr_pkt_entry_append()</h2>
 
@@ -167,46 +126,6 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">struct <a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a> *&#160;</td>
           <td class="paramname"><em>dst</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct <a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a> *&#160;</td>
-          <td class="paramname"><em>src</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a25a0ac9f9dcbe2895ca149aa01a37633" name="a25a0ac9f9dcbe2895ca149aa01a37633"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25a0ac9f9dcbe2895ca149aa01a37633">&#9670;&#160;</a></span>rxr_pkt_entry_clone()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a> * rxr_pkt_entry_clone </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structrxr__ep.html">rxr_ep</a> *&#160;</td>
-          <td class="paramname"><em>ep</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct ofi_bufpool *&#160;</td>
-          <td class="paramname"><em>pkt_pool</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">enum <a class="el" href="rxr__pkt__entry_8h.html#a5bfee5499517616bc20acfaaaa58846f">rxr_pkt_entry_alloc_type</a>&#160;</td>
-          <td class="paramname"><em>alloc_type</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -320,71 +239,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7be10d05cd99b49948b3befaf5e87e35" name="a7be10d05cd99b49948b3befaf5e87e35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7be10d05cd99b49948b3befaf5e87e35">&#9670;&#160;</a></span>rxr_pkt_entry_release_rx()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void rxr_pkt_entry_release_rx </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structrxr__ep.html">rxr_ep</a> *&#160;</td>
-          <td class="paramname"><em>ep</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct <a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a> *&#160;</td>
-          <td class="paramname"><em>pkt_entry</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aeb38c9887eca025ba25cdbdcdd04d8a3" name="aeb38c9887eca025ba25cdbdcdd04d8a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb38c9887eca025ba25cdbdcdd04d8a3">&#9670;&#160;</a></span>rxr_pkt_entry_release_tx()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void rxr_pkt_entry_release_tx </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structrxr__ep.html">rxr_ep</a> *&#160;</td>
-          <td class="paramname"><em>ep</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct <a class="el" href="structrxr__pkt__entry.html">rxr_pkt_entry</a> *&#160;</td>
-          <td class="paramname"><em>pkt</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>release a TX packet entry </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ep</td><td>the end point </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">pkt</td><td>the pkt_entry to be released </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a2eff1666a74ea32e6d89c0e6d21c398e" name="a2eff1666a74ea32e6d89c0e6d21c398e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2eff1666a74ea32e6d89c0e6d21c398e">&#9670;&#160;</a></span>rxr_pkt_entry_send()</h2>
 
@@ -455,6 +309,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>create a copy of unexpected packet entry </p>
+<p >Handle copying or updating the metadata for an unexpected packet.</p>
+<p >Packets from the EFA RX pool will be copied into a separate buffer not registered with the device (if this option is enabled) so that we can repost the registered buffer again to keep the EFA RX queue full. Packets from the SHM RX pool will also be copied to reuse the unexpected message pool.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ep</td><td>the end point </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pkt_entry_ptr</td><td>unexpected packet, if this packet is copied to a new memory region this pointer will be updated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>struct <a class="el" href="structrxr__pkt__entry.html" title="Packet entry.">rxr_pkt_entry</a> of the updated or copied packet, NULL on allocation failure. </dd></dl>
 
 </div>
 </div>

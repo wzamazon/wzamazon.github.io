@@ -24,6 +24,7 @@
 */
 var menudata={children:[
 {text:"Main Page",url:"index.html"},
+{text:"Related Pages",url:"pages.html"},
 {text:"Classes",url:"annotated.html",children:[
 {text:"Class List",url:"annotated.html"},
 {text:"Class Index",url:"classes.html"},
@@ -127,5 +128,6 @@ var menudata={children:[
 {text:"l",url:"globals_defs_l.html#index_l"},
 {text:"m",url:"globals_defs_m.html#index_m"},
 {text:"r",url:"globals_defs_r.html#index_r"},
+{text:"s",url:"globals_defs_s.html#index_s"},
 {text:"u",url:"globals_defs_u.html#index_u"},
 {text:"x",url:"globals_defs_x.html#index_x"}]}]}]}]}

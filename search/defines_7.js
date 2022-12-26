@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['unknown_5ferr_5fstr_0',['UNKNOWN_ERR_STR',['../efa__strerror_8c.html#ac262cd5f26f828cfa7e47be146efaf69',1,'efa_strerror.c']]]
+  ['shm_5fmr_5fkeygen_5finit_0',['SHM_MR_KEYGEN_INIT',['../efa__mr_8c.html#a6476d10cb5a5f656be80ec838776c82d',1,'efa_mr.c']]]
 ];

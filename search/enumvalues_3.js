@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['rxr_5fcuda_5fcopy_5fgdrcopy_0',['RXR_CUDA_COPY_GDRCOPY',['../rxr__op__entry_8h.html#a4000e30bd6e1a2c7e94ba1aaef88d8c8a89bf4c7f990c04cd86492224f6419fac',1,'rxr_op_entry.h']]],
+  ['rxr_5fcuda_5fcopy_5fblocking_0',['RXR_CUDA_COPY_BLOCKING',['../rxr__op__entry_8h.html#a4000e30bd6e1a2c7e94ba1aaef88d8c8aa226547542b4e11df4c4644e5e3b9449',1,'rxr_op_entry.h']]],
   ['rxr_5fcuda_5fcopy_5flocalread_1',['RXR_CUDA_COPY_LOCALREAD',['../rxr__op__entry_8h.html#a4000e30bd6e1a2c7e94ba1aaef88d8c8ab1250851b432d13655d5ce829a61ca71',1,'rxr_op_entry.h']]],
   ['rxr_5fcuda_5fcopy_5funspec_2',['RXR_CUDA_COPY_UNSPEC',['../rxr__op__entry_8h.html#a4000e30bd6e1a2c7e94ba1aaef88d8c8a67e8b63d0e3a7efce8635de0b76e3283',1,'rxr_op_entry.h']]],
   ['rxr_5fop_5ffree_3',['RXR_OP_FREE',['../rxr__op__entry_8h.html#aa79a8da305538a9a886d8f57455fcf15a73dbd59a42c10e483b999c2f7479c3ff',1,'rxr_op_entry.h']]],

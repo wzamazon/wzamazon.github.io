@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Libfabric EFA Provider: prov/efa/src/rxr/rxr_rma.h Source File</title>
+<title>Libfabric EFA Provider: prov/efa/src/rxr/rxr_pkt_pool.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -73,11 +73,11 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">rxr_rma.h</div></div>
+  <div class="headertitle"><div class="title">rxr_pkt_pool.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="rxr__rma_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright (c) 2019 Amazon.com, Inc. or its affiliates.</span></div>
+<a href="rxr__pkt__pool_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright (c) 2019-2022 Amazon.com, Inc. or its affiliates.</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * All rights reserved.</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * This software is available to you under a choice of one of two</span></div>
@@ -108,26 +108,39 @@ $(function() {
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"> * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"> * SOFTWARE.</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#if HAVE_CONFIG_H</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;config.h&gt;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif </span><span class="comment">/* HAVE_CONFIG_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#ifndef _RXR_PKT_POOL_H</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#define _RXR_PKT_POOL_H</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#ifndef _RXR_RMA_H_</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="rxr__rma_8h.html#abe9b2ceef1a0caaf0e3fda7c45c23fd2">   38</a></span><span class="preprocessor">#define _RXR_RMA_H_</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;rdma/fi_rma.h&gt;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">/* Forward declaration to avoid circular dependency */</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">struct </span><a class="code hl_struct" href="structrxr__ep.html">rxr_ep</a>;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">int</span> <a class="code hl_function" href="rxr__rma_8h.html#a11526586cee000a9960d37618db411d5">rxr_rma_verified_copy_iov</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrxr__ep.html">rxr_ep</a> *ep, <span class="keyword">struct</span> <a class="code hl_struct" href="structefa__rma__iov.html">efa_rma_iov</a> *rma,</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                  <span class="keywordtype">size_t</span> count, uint32_t flags,</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                  <span class="keyword">struct</span> iovec *iov, <span class="keywordtype">void</span> **desc);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structrxr__pkt__pool.html">   42</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrxr__pkt__pool.html">rxr_pkt_pool</a> {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structrxr__pkt__pool.html#ade1592ea783408afe1fbac401838b6bb">   43</a></span>    <span class="keyword">struct </span>ofi_bufpool *<a class="code hl_variable" href="structrxr__pkt__pool.html#ade1592ea783408afe1fbac401838b6bb">localinfo_pool</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structrxr__pkt__pool.html#a64bdabe774a301e1c4e9c794e095c956">   44</a></span>    <span class="keyword">struct </span>ofi_bufpool *<a class="code hl_variable" href="structrxr__pkt__pool.html#a64bdabe774a301e1c4e9c794e095c956">wiredata_pool</a>;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">extern</span> <span class="keyword">struct </span>fi_ops_rma <a class="code hl_variable" href="rxr__rma_8h.html#a83605dc5d3a0bd32f063c608871abc80">rxr_ops_rma</a>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="arxr__rma_8h_html_a11526586cee000a9960d37618db411d5"><div class="ttname"><a href="rxr__rma_8h.html#a11526586cee000a9960d37618db411d5">rxr_rma_verified_copy_iov</a></div><div class="ttdeci">int rxr_rma_verified_copy_iov(struct rxr_ep *ep, struct efa_rma_iov *rma, size_t count, uint32_t flags, struct iovec *iov, void **desc)</div><div class="ttdef"><b>Definition:</b> rxr_rma.c:46</div></div>
-<div class="ttc" id="arxr__rma_8h_html_a83605dc5d3a0bd32f063c608871abc80"><div class="ttname"><a href="rxr__rma_8h.html#a83605dc5d3a0bd32f063c608871abc80">rxr_ops_rma</a></div><div class="ttdeci">struct fi_ops_rma rxr_ops_rma</div><div class="ttdef"><b>Definition:</b> rxr_rma.c:549</div></div>
-<div class="ttc" id="astructefa__rma__iov_html"><div class="ttname"><a href="structefa__rma__iov.html">efa_rma_iov</a></div><div class="ttdef"><b>Definition:</b> rdm_proto_v4.h:165</div></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="structrxr__pkt__pool.html#a0328efdbd4bc29c9f16f86b3f05815bd">   46</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structrxr__pkt__pool.html#a0328efdbd4bc29c9f16f86b3f05815bd">flags</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>};</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordtype">int</span> <a class="code hl_function" href="rxr__pkt__pool_8h.html#a6b368e062aa82b8b9c638cd33f16a36c">rxr_pkt_pool_create</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrxr__ep.html">rxr_ep</a> *ep, <span class="keywordtype">size_t</span> size, <span class="keywordtype">size_t</span> chunk_cnt,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordtype">size_t</span> max_cnt, <span class="keywordtype">size_t</span> flags, <span class="keywordtype">bool</span> mr,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keyword">struct</span> <a class="code hl_struct" href="structrxr__pkt__pool.html">rxr_pkt_pool</a> **pkt_pool);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keywordtype">int</span> <a class="code hl_function" href="rxr__pkt__pool_8h.html#ae960035c2872b494b75188a5746ef55d">rxr_pkt_pool_grow</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrxr__pkt__pool.html">rxr_pkt_pool</a> *<a class="code hl_struct" href="structrxr__pkt__pool.html">rxr_pkt_pool</a>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">void</span> <a class="code hl_function" href="rxr__pkt__pool_8h.html#a40cf2aa541a343729fbd18aa95d8e0ef">rxr_pkt_pool_destroy</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrxr__pkt__pool.html">rxr_pkt_pool</a> *pkt_pool);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="arxr__pkt__pool_8h_html_a40cf2aa541a343729fbd18aa95d8e0ef"><div class="ttname"><a href="rxr__pkt__pool_8h.html#a40cf2aa541a343729fbd18aa95d8e0ef">rxr_pkt_pool_destroy</a></div><div class="ttdeci">void rxr_pkt_pool_destroy(struct rxr_pkt_pool *pkt_pool)</div><div class="ttdef"><b>Definition:</b> rxr_pkt_pool.c:132</div></div>
+<div class="ttc" id="arxr__pkt__pool_8h_html_a6b368e062aa82b8b9c638cd33f16a36c"><div class="ttname"><a href="rxr__pkt__pool_8h.html#a6b368e062aa82b8b9c638cd33f16a36c">rxr_pkt_pool_create</a></div><div class="ttdeci">int rxr_pkt_pool_create(struct rxr_ep *ep, size_t size, size_t chunk_cnt, size_t max_cnt, size_t flags, bool mr, struct rxr_pkt_pool **pkt_pool)</div><div class="ttdef"><b>Definition:</b> rxr_pkt_pool.c:71</div></div>
+<div class="ttc" id="arxr__pkt__pool_8h_html_ae960035c2872b494b75188a5746ef55d"><div class="ttname"><a href="rxr__pkt__pool_8h.html#ae960035c2872b494b75188a5746ef55d">rxr_pkt_pool_grow</a></div><div class="ttdeci">int rxr_pkt_pool_grow(struct rxr_pkt_pool *rxr_pkt_pool)</div><div class="ttdef"><b>Definition:</b> rxr_pkt_pool.c:114</div></div>
 <div class="ttc" id="astructrxr__ep_html"><div class="ttname"><a href="structrxr__ep.html">rxr_ep</a></div><div class="ttdef"><b>Definition:</b> rxr.h:301</div></div>
+<div class="ttc" id="astructrxr__pkt__pool_html"><div class="ttname"><a href="structrxr__pkt__pool.html">rxr_pkt_pool</a></div><div class="ttdef"><b>Definition:</b> rxr_pkt_pool.h:42</div></div>
+<div class="ttc" id="astructrxr__pkt__pool_html_a0328efdbd4bc29c9f16f86b3f05815bd"><div class="ttname"><a href="structrxr__pkt__pool.html#a0328efdbd4bc29c9f16f86b3f05815bd">rxr_pkt_pool::flags</a></div><div class="ttdeci">int flags</div><div class="ttdef"><b>Definition:</b> rxr_pkt_pool.h:46</div></div>
+<div class="ttc" id="astructrxr__pkt__pool_html_a64bdabe774a301e1c4e9c794e095c956"><div class="ttname"><a href="structrxr__pkt__pool.html#a64bdabe774a301e1c4e9c794e095c956">rxr_pkt_pool::wiredata_pool</a></div><div class="ttdeci">struct ofi_bufpool * wiredata_pool</div><div class="ttdef"><b>Definition:</b> rxr_pkt_pool.h:44</div></div>
+<div class="ttc" id="astructrxr__pkt__pool_html_ade1592ea783408afe1fbac401838b6bb"><div class="ttname"><a href="structrxr__pkt__pool.html#ade1592ea783408afe1fbac401838b6bb">rxr_pkt_pool::localinfo_pool</a></div><div class="ttdeci">struct ofi_bufpool * localinfo_pool</div><div class="ttdef"><b>Definition:</b> rxr_pkt_pool.h:43</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

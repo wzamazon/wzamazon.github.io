@@ -268,7 +268,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ep</td><td>end point. </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">pkt_entry</td><td>packet entry. Header must have been set when the function is called </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pkt_data_offset</td><td>the data offset in packet, (in reference to pkt_entry-&gt;pkt). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pkt_data_offset</td><td>the data offset in packet, (in reference to pkt_entry-&gt;wiredata). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">op_entry</td><td>This function will use iov, iov_count and desc of op_entry </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">op_data_offset</td><td>source offset of the data (in reference to op_entry-&gt;iov) </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">data_size</td><td>length of the data to be set up. </td></tr>

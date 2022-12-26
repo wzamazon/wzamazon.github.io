@@ -98,11 +98,17 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aaabdc2dbdb9e832d45f6f4e2451f514d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="efa__hmem_8h.html#aaabdc2dbdb9e832d45f6f4e2451f514d">efa_hmem_validate_p2p_opt</a> (struct <a class="el" href="structefa__domain.html">efa_domain</a> *<a class="el" href="structefa__domain.html">efa_domain</a>, enum fi_hmem_iface iface, int p2p_opt)</td></tr>
-<tr class="memdesc:aaabdc2dbdb9e832d45f6f4e2451f514d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validate an FI_OPT_FI_HMEM_P2P (FI_OPT_ENDPOINT) option for a specified HMEM interface. If p2p_opt is FI_HMEM_P2P_DISABLED, we update hmem_info[iface]-&gt;p2p_disabled_by_user to be true only if the interface doesn't require p2p.  <a href="efa__hmem_8h.html#aaabdc2dbdb9e832d45f6f4e2451f514d">More...</a><br /></td></tr>
+<tr class="memdesc:aaabdc2dbdb9e832d45f6f4e2451f514d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validate an FI_OPT_FI_HMEM_P2P (FI_OPT_ENDPOINT) option for a specified HMEM interface. Also update hmem_info[iface]-&gt;p2p_disabled_by_user accordingly.  <a href="efa__hmem_8h.html#aaabdc2dbdb9e832d45f6f4e2451f514d">More...</a><br /></td></tr>
 <tr class="separator:aaabdc2dbdb9e832d45f6f4e2451f514d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e9d57ec338132b15e4c7028cf493865"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="efa__hmem_8h.html#a9e9d57ec338132b15e4c7028cf493865">efa_hmem_info_init_all</a> (struct <a class="el" href="structefa__domain.html">efa_domain</a> *<a class="el" href="structefa__domain.html">efa_domain</a>)</td></tr>
 <tr class="memdesc:a9e9d57ec338132b15e4c7028cf493865"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the hmem_info structs for all of the HMEM devices. The device hmem_info struct will be used to determine which efa transfer protocol should be selected.  <a href="efa__hmem_8h.html#a9e9d57ec338132b15e4c7028cf493865">More...</a><br /></td></tr>
 <tr class="separator:a9e9d57ec338132b15e4c7028cf493865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1d374a52237bac76ed3ee0056e8aeb1"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="efa__hmem_8h.html#ad1d374a52237bac76ed3ee0056e8aeb1">efa_copy_from_hmem_iov</a> (void **desc, char *buff, int buff_size, const struct iovec *hmem_iov, int iov_count)</td></tr>
+<tr class="memdesc:ad1d374a52237bac76ed3ee0056e8aeb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy data from a hmem IOV to a system buffer.  <a href="efa__hmem_8h.html#ad1d374a52237bac76ed3ee0056e8aeb1">More...</a><br /></td></tr>
+<tr class="separator:ad1d374a52237bac76ed3ee0056e8aeb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa47625561fb3540093edb48a325d6bdd"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="efa__hmem_8h.html#aa47625561fb3540093edb48a325d6bdd">efa_copy_to_hmem_iov</a> (void **desc, struct iovec *hmem_iov, int iov_count, char *buff, int buff_size)</td></tr>
+<tr class="memdesc:aa47625561fb3540093edb48a325d6bdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy data from a system buffer to a hmem IOV.  <a href="efa__hmem_8h.html#aa47625561fb3540093edb48a325d6bdd">More...</a><br /></td></tr>
+<tr class="separator:aa47625561fb3540093edb48a325d6bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="aa6601f0fb26cceea23aeeb039bc00e85" name="aa6601f0fb26cceea23aeeb039bc00e85"></a>
@@ -142,6 +148,124 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ad1d374a52237bac76ed3ee0056e8aeb1" name="ad1d374a52237bac76ed3ee0056e8aeb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1d374a52237bac76ed3ee0056e8aeb1">&#9670;&#160;</a></span>efa_copy_from_hmem_iov()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t efa_copy_from_hmem_iov </td>
+          <td>(</td>
+          <td class="paramtype">void **&#160;</td>
+          <td class="paramname"><em>desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>buff_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct iovec *&#160;</td>
+          <td class="paramname"><em>hmem_iov</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iov_count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy data from a hmem IOV to a system buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">desc</td><td>Array of memory desc corresponding to IOV buffers </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buff</td><td>Target buffer (system memory) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buff_size</td><td>The size of the target buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hmem_iov</td><td>IOV data source </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">iov_count</td><td>Number of IOV structures in IOV array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>number of bytes copied on success, -FI_ETRUNC on error </dd></dl>
+
+</div>
+</div>
+<a id="aa47625561fb3540093edb48a325d6bdd" name="aa47625561fb3540093edb48a325d6bdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa47625561fb3540093edb48a325d6bdd">&#9670;&#160;</a></span>efa_copy_to_hmem_iov()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t efa_copy_to_hmem_iov </td>
+          <td>(</td>
+          <td class="paramtype">void **&#160;</td>
+          <td class="paramname"><em>desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct iovec *&#160;</td>
+          <td class="paramname"><em>hmem_iov</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iov_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>buff_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy data from a system buffer to a hmem IOV. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">desc</td><td>Array of memory desc corresponding to IOV buffers </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">hmem_iov</td><td>Target IOV (HMEM) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">iov_count</td><td>Number of IOV entries in vector </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buff</td><td>System buffer data source </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buff_size</td><td>Size of data to copy </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>number of bytes copied on success, -FI_ETRUNC on error </dd></dl>
+
+</div>
+</div>
 <a id="a9e9d57ec338132b15e4c7028cf493865" name="a9e9d57ec338132b15e4c7028cf493865"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e9d57ec338132b15e4c7028cf493865">&#9670;&#160;</a></span>efa_hmem_info_init_all()</h2>
 
@@ -201,7 +325,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Validate an FI_OPT_FI_HMEM_P2P (FI_OPT_ENDPOINT) option for a specified HMEM interface. If p2p_opt is FI_HMEM_P2P_DISABLED, we update hmem_info[iface]-&gt;p2p_disabled_by_user to be true only if the interface doesn't require p2p. </p>
+<p>Validate an FI_OPT_FI_HMEM_P2P (FI_OPT_ENDPOINT) option for a specified HMEM interface. Also update hmem_info[iface]-&gt;p2p_disabled_by_user accordingly. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">domain</td><td>The <a class="el" href="structefa__domain.html">efa_domain</a> struct which contains an <a class="el" href="structefa__hmem__info.html">efa_hmem_info</a> array </td></tr>
@@ -210,7 +334,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>FI_SUCCESS if the P2P option is valid for the given interface -FI_OPNOTSUPP if the P2P option is invalid -FI_ENODATA if the given HMEM interface was not initialized -FI_EINVAL if p2p_opt is not a valid FI_OPT_FI_HMEM_P2P option </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if the P2P option is valid for the given interface -FI_OPNOTSUPP if the P2P option is invalid -FI_ENODATA if the given HMEM interface was not initialized -FI_EINVAL if p2p_opt is not a valid FI_OPT_FI_HMEM_P2P option </dd></dl>
 
 </div>
 </div>
