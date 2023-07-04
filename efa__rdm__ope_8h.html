@@ -100,10 +100,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structefa__rdm__atomic__hdr.html">efa_rdm_atomic_hdr</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">basic information of an atomic operation used by all 3 types of atomic operations: fetch, compare and write  <a href="structefa__rdm__atomic__hdr.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">basic information of an atomic operation  <a href="structefa__rdm__atomic__hdr.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structefa__rdm__atomic__ex.html">efa_rdm_atomic_ex</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">extra information that is not included in fi_msg_atomic used by fetch atomic and compare atomic. resp stands for response comp stands for compare  <a href="structefa__rdm__atomic__ex.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">extra information that is not included in fi_msg_atomic  <a href="structefa__rdm__atomic__ex.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structefa__rdm__ope.html">efa_rdm_ope</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">EFA RDM operation entry (ope)  <a href="structefa__rdm__ope.html#details">More...</a><br/></td></tr>
@@ -143,24 +143,6 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a3560fc43be30d9394c75582ad73c1e4e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="efa__rdm__ope_8h.html#a3560fc43be30d9394c75582ad73c1e4e">efa_rdm_ope_type</a> { <a class="el" href="efa__rdm__ope_8h.html#a3560fc43be30d9394c75582ad73c1e4ea504f600f59c06030e4fc9be918617c91">EFA_RDM_TXE</a> = 1, 
-<a class="el" href="efa__rdm__ope_8h.html#a3560fc43be30d9394c75582ad73c1e4ea283ee9d48b376f2ba4dddbc88001b198">EFA_RDM_RXE</a>
- }</td></tr>
-<tr class="memdesc:a3560fc43be30d9394c75582ad73c1e4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">EFA RDM operation entry (ope) type.  <a href="efa__rdm__ope_8h.html#a3560fc43be30d9394c75582ad73c1e4e">More...</a><br/></td></tr>
-<tr class="separator:a3560fc43be30d9394c75582ad73c1e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c9901821c399c33346c2a539e688a30"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="efa__rdm__ope_8h.html#a6c9901821c399c33346c2a539e688a30">efa_rdm_ope_state</a> { <br/>
-&#160;&#160;<a class="el" href="efa__rdm__ope_8h.html#a6c9901821c399c33346c2a539e688a30a4df26b738b43152b2eae14bdadaa08d8">EFA_RDM_OPE_FREE</a> = 0, 
-<a class="el" href="efa__rdm__ope_8h.html#a6c9901821c399c33346c2a539e688a30a6edc952c1fffee5962bb6360d9c13846">EFA_RDM_TXE_REQ</a>, 
-<a class="el" href="efa__rdm__ope_8h.html#a6c9901821c399c33346c2a539e688a30a4c6f11bd54a0d7f75fb8c08f758d2c48">EFA_RDM_TXE_SEND</a>, 
-<a class="el" href="efa__rdm__ope_8h.html#a6c9901821c399c33346c2a539e688a30a0709e08ce9b65224aa3da2d60a489989">EFA_RDM_RXE_INIT</a>, 
-<br/>
-&#160;&#160;<a class="el" href="efa__rdm__ope_8h.html#a6c9901821c399c33346c2a539e688a30a6351d6db7d4eb41e6f52172fb95c182a">EFA_RDM_RXE_UNEXP</a>, 
-<a class="el" href="efa__rdm__ope_8h.html#a6c9901821c399c33346c2a539e688a30a1754f19e6e9fcd2cfe7f9b74fb6eb61e">EFA_RDM_RXE_MATCHED</a>, 
-<a class="el" href="efa__rdm__ope_8h.html#a6c9901821c399c33346c2a539e688a30a804793464095cfae2c76d05989523d75">EFA_RDM_RXE_RECV</a>
-<br/>
- }</td></tr>
-<tr class="memdesc:a6c9901821c399c33346c2a539e688a30"><td class="mdescLeft">&#160;</td><td class="mdescRight">EFA RDM operation entry (ope)'s state.  <a href="efa__rdm__ope_8h.html#a6c9901821c399c33346c2a539e688a30">More...</a><br/></td></tr>
-<tr class="separator:a6c9901821c399c33346c2a539e688a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfa7c40e76455a0248fb496a26d9583b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="efa__rdm__ope_8h.html#acfa7c40e76455a0248fb496a26d9583b">efa_rdm_cuda_copy_method</a> { <a class="el" href="efa__rdm__ope_8h.html#acfa7c40e76455a0248fb496a26d9583ba573464aa8f589eab378cf87a879a0115">EFA_RDM_CUDA_COPY_UNSPEC</a> = 0, 
 <a class="el" href="efa__rdm__ope_8h.html#acfa7c40e76455a0248fb496a26d9583ba49b4d615ffb2b73de7cd5417984faa28">EFA_RDM_CUDA_COPY_BLOCKING</a>, 
 <a class="el" href="efa__rdm__ope_8h.html#acfa7c40e76455a0248fb496a26d9583ba6aae189b87b22b4c1d5391d651018448">EFA_RDM_CUDA_COPY_LOCALREAD</a>
@@ -401,65 +383,6 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="acfa7c40e76455a0248fb496a26d9583ba6aae189b87b22b4c1d5391d651018448"></a>EFA_RDM_CUDA_COPY_LOCALREAD</em>&nbsp;</td><td class="fielddoc">
 <p>gdrcopy or cudaMemcpy device driven copy by using local RDMA read </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a class="anchor" id="a6c9901821c399c33346c2a539e688a30"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="efa__rdm__ope_8h.html#a6c9901821c399c33346c2a539e688a30">efa_rdm_ope_state</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>EFA RDM operation entry (ope)'s state. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a6c9901821c399c33346c2a539e688a30a4df26b738b43152b2eae14bdadaa08d8"></a>EFA_RDM_OPE_FREE</em>&nbsp;</td><td class="fielddoc">
-<p>txe/rxe free state </p>
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="a6c9901821c399c33346c2a539e688a30a6edc952c1fffee5962bb6360d9c13846"></a>EFA_RDM_TXE_REQ</em>&nbsp;</td><td class="fielddoc">
-<p>txe sending REQ packet </p>
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="a6c9901821c399c33346c2a539e688a30a4c6f11bd54a0d7f75fb8c08f758d2c48"></a>EFA_RDM_TXE_SEND</em>&nbsp;</td><td class="fielddoc">
-<p>txe sending data in progress </p>
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="a6c9901821c399c33346c2a539e688a30a0709e08ce9b65224aa3da2d60a489989"></a>EFA_RDM_RXE_INIT</em>&nbsp;</td><td class="fielddoc">
-<p>rxe ready to recv RTM </p>
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="a6c9901821c399c33346c2a539e688a30a6351d6db7d4eb41e6f52172fb95c182a"></a>EFA_RDM_RXE_UNEXP</em>&nbsp;</td><td class="fielddoc">
-<p>rxe unexp msg waiting for post recv </p>
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="a6c9901821c399c33346c2a539e688a30a1754f19e6e9fcd2cfe7f9b74fb6eb61e"></a>EFA_RDM_RXE_MATCHED</em>&nbsp;</td><td class="fielddoc">
-<p>rxe matched with RTM </p>
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="a6c9901821c399c33346c2a539e688a30a804793464095cfae2c76d05989523d75"></a>EFA_RDM_RXE_RECV</em>&nbsp;</td><td class="fielddoc">
-<p>rxe large msg recv data pkts </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a class="anchor" id="a3560fc43be30d9394c75582ad73c1e4e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="efa__rdm__ope_8h.html#a3560fc43be30d9394c75582ad73c1e4e">efa_rdm_ope_type</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>EFA RDM operation entry (ope) type. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a3560fc43be30d9394c75582ad73c1e4ea504f600f59c06030e4fc9be918617c91"></a>EFA_RDM_TXE</em>&nbsp;</td><td class="fielddoc">
-<p>this ope is for an TX operation </p>
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="a3560fc43be30d9394c75582ad73c1e4ea283ee9d48b376f2ba4dddbc88001b198"></a>EFA_RDM_RXE</em>&nbsp;</td><td class="fielddoc">
-<p>this ope is for an RX operation </p>
 </td></tr>
 </table>
 
