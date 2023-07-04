@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['cache',['cache',['../structefa__domain.html#aa68fa0409354157e99c4a2289e4683bf',1,'efa_domain']]],
+  ['comp_5fiov',['comp_iov',['../structefa__rdm__atomic__ex.html#a358513d2c0de0dc56d125b78ec1b64e4',1,'efa_rdm_atomic_ex']]],
+  ['comp_5fiov_5fcount',['comp_iov_count',['../structefa__rdm__atomic__ex.html#a64cf7b343a57f0300f41509e5e25ea36',1,'efa_rdm_atomic_ex']]],
+  ['compare_5fdesc',['compare_desc',['../structefa__rdm__atomic__ex.html#a849687cac3ab80696806abe09ea5e3bf',1,'efa_rdm_atomic_ex']]],
+  ['conn',['conn',['../structefa__av__entry.html#ab35b820ab093ed677fcf5b3013ee25ca',1,'efa_av_entry::conn()'],['../structefa__cur__reverse__av.html#aaeef648cfa4f61519ad21c4b641c1a78',1,'efa_cur_reverse_av::conn()'],['../structefa__prv__reverse__av.html#ac36704100aef48f42fb36fc3388b3b23',1,'efa_prv_reverse_av::conn()']]],
+  ['connid',['connid',['../structefa__prv__reverse__av__key.html#a7dfa6fa1e56ed6084bf5c9d520fb75b6',1,'efa_prv_reverse_av_key::connid()'],['../structefa__rdm__cts__hdr.html#ac16c2e74a62e59d7f807413d1ba2a816',1,'efa_rdm_cts_hdr::connid()'],['../structefa__rdm__ctsdata__opt__connid__hdr.html#a243c4bda7722c5935a79692880ea9584',1,'efa_rdm_ctsdata_opt_connid_hdr::connid()'],['../structefa__rdm__readrsp__hdr.html#ac414529004da37ee3ca91bebbbf22331',1,'efa_rdm_readrsp_hdr::connid()'],['../structefa__rdm__eor__hdr.html#ae969c732b11bb805600c4d0f01d8397c',1,'efa_rdm_eor_hdr::connid()'],['../structefa__rdm__atomrsp__hdr.html#afb5307fdabe50c29c569982c6ef26d26',1,'efa_rdm_atomrsp_hdr::connid()'],['../structefa__rdm__handshake__opt__connid__hdr.html#a3de90aca1d689bb3aad96a593f3ce928',1,'efa_rdm_handshake_opt_connid_hdr::connid()'],['../structefa__rdm__receipt__hdr.html#a3d67722eef3b92da8f16a7dd59c5c7a0',1,'efa_rdm_receipt_hdr::connid()'],['../structefa__rdm__req__opt__connid__hdr.html#a554f081fb83ae7cc9c43130c5a175bff',1,'efa_rdm_req_opt_connid_hdr::connid()']]],
+  ['connid_5fhdr',['connid_hdr',['../structefa__rdm__ctsdata__hdr.html#a8d3d31c65f75f0192407d001c8a99735',1,'efa_rdm_ctsdata_hdr']]],
+  ['context_5ftype',['context_type',['../structefa__rdm__rma__context__pkt.html#a62e8e43cc8e37902fa7699fcca95e41b',1,'efa_rdm_rma_context_pkt']]],
+  ['cq_5fdata',['cq_data',['../structefa__rdm__req__opt__cq__data__hdr.html#ac935ac5d7b5e4f64015eae5ce10962e2',1,'efa_rdm_req_opt_cq_data_hdr']]],
+  ['cq_5fentry',['cq_entry',['../structefa__rdm__ope.html#a0b5d5b5ed64987488366162aae627236',1,'efa_rdm_ope']]],
+  ['cq_5fentry_5fargs',['CQ_ENTRY_ARGS',['../efa__rdm__tracepoint__def_8h.html#ae20fec05c9cb29e855c844cbfd8cb4d1',1,'efa_rdm_tracepoint_def.h']]],
+  ['cq_5fentry_5ffields',['CQ_ENTRY_FIELDS',['../efa__rdm__tracepoint__def_8h.html#a0fc7005f4486a3c551c56a735822716f',1,'efa_rdm_tracepoint_def.h']]],
+  ['cq_5fsize',['cq_size',['../structefa__env.html#abb8af48ba6bfdc9ae42e6c65f246d43c',1,'efa_env']]],
+  ['credit_5frequest',['credit_request',['../structefa__rdm__longcts__rtm__base__hdr.html#ab553ec779744ec220f8ed50d43073a58',1,'efa_rdm_longcts_rtm_base_hdr::credit_request()'],['../structefa__rdm__longcts__rtw__hdr.html#a85b2539d896160a838169a5a01a0df79',1,'efa_rdm_longcts_rtw_hdr::credit_request()'],['../structefa__rdm__dc__longcts__rtw__hdr.html#a8e9aa18f7ec9ae52e7b8e05009b4db10',1,'efa_rdm_dc_longcts_rtw_hdr::credit_request()'],['../structefa__rdm__runtcts__rtm__base__hdr.html#abdced2067fdd3e31c2118c79f907e9cd',1,'efa_rdm_runtcts_rtm_base_hdr::credit_request()'],['../structefa__rdm__runtcts__rtw__hdr.html#a821960b39e5e65f999196dcff5e1ade8',1,'efa_rdm_runtcts_rtw_hdr::credit_request()']]],
+  ['cuda',['cuda',['../structefa__mr__peer.html#a09a99eae333f9adcd5c7bbb1047f01a6',1,'efa_mr_peer']]],
+  ['cuda_5fapi_5fpermitted',['cuda_api_permitted',['../structefa__rdm__ep.html#afa660348c05d3756155c0453e232c942',1,'efa_rdm_ep']]],
+  ['cuda_5fcopy_5fmethod',['cuda_copy_method',['../structefa__rdm__ope.html#ad5f48c8538e357555c83177cdc248226',1,'efa_rdm_ope']]],
+  ['cuda_5fnon_5fp2p_5fmr_5fkeygen_5finit',['CUDA_NON_P2P_MR_KEYGEN_INIT',['../efa__mr_8c.html#a25673b7bcae32b60e3b63f7051948325',1,'efa_mr.c']]],
+  ['cur_5freverse_5fav',['cur_reverse_av',['../structefa__av.html#aa06e878058753759078e6fd82be1edea',1,'efa_av']]]
+];

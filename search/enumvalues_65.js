@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['efa_5ffork_5fsupport_5foff',['EFA_FORK_SUPPORT_OFF',['../efa__fork__support_8h.html#ab95a6204a0cb4a62ec95aa80b415d1c2a5a75efb27aaf57795984ae6f174225f3',1,'efa_fork_support.h']]],
+  ['efa_5ffork_5fsupport_5fon',['EFA_FORK_SUPPORT_ON',['../efa__fork__support_8h.html#ab95a6204a0cb4a62ec95aa80b415d1c2a15e6f223967a4c37a6371f73e6e3c26f',1,'efa_fork_support.h']]],
+  ['efa_5ffork_5fsupport_5funneeded',['EFA_FORK_SUPPORT_UNNEEDED',['../efa__fork__support_8h.html#ab95a6204a0cb4a62ec95aa80b415d1c2a1a5870b3a81ad39f20c06c443f8d4ada',1,'efa_fork_support.h']]],
+  ['efa_5frdm_5fcuda_5fcopy_5fblocking',['EFA_RDM_CUDA_COPY_BLOCKING',['../efa__rdm__ope_8h.html#acfa7c40e76455a0248fb496a26d9583ba49b4d615ffb2b73de7cd5417984faa28',1,'efa_rdm_ope.h']]],
+  ['efa_5frdm_5fcuda_5fcopy_5flocalread',['EFA_RDM_CUDA_COPY_LOCALREAD',['../efa__rdm__ope_8h.html#acfa7c40e76455a0248fb496a26d9583ba6aae189b87b22b4c1d5391d651018448',1,'efa_rdm_ope.h']]],
+  ['efa_5frdm_5fcuda_5fcopy_5funspec',['EFA_RDM_CUDA_COPY_UNSPEC',['../efa__rdm__ope_8h.html#acfa7c40e76455a0248fb496a26d9583ba573464aa8f589eab378cf87a879a0115',1,'efa_rdm_ope.h']]],
+  ['efa_5frdm_5fope_5ffree',['EFA_RDM_OPE_FREE',['../efa__rdm__ope_8h.html#a6c9901821c399c33346c2a539e688a30a4df26b738b43152b2eae14bdadaa08d8',1,'efa_rdm_ope.h']]],
+  ['efa_5frdm_5fpke_5ffrom_5fefa_5frx_5fpool',['EFA_RDM_PKE_FROM_EFA_RX_POOL',['../efa__rdm__pke_8h.html#a9457b75b4705ca844507d177c3259cbeaf557cb2ed47edec6615642406fa2029f',1,'efa_rdm_pke.h']]],
+  ['efa_5frdm_5fpke_5ffrom_5fefa_5ftx_5fpool',['EFA_RDM_PKE_FROM_EFA_TX_POOL',['../efa__rdm__pke_8h.html#a9457b75b4705ca844507d177c3259cbea6337a910b833f26695244bd75d17a393',1,'efa_rdm_pke.h']]],
+  ['efa_5frdm_5fpke_5ffrom_5fooo_5fpool',['EFA_RDM_PKE_FROM_OOO_POOL',['../efa__rdm__pke_8h.html#a9457b75b4705ca844507d177c3259cbea37d747762259d267b4215839014ff7e4',1,'efa_rdm_pke.h']]],
+  ['efa_5frdm_5fpke_5ffrom_5fread_5fcopy_5fpool',['EFA_RDM_PKE_FROM_READ_COPY_POOL',['../efa__rdm__pke_8h.html#a9457b75b4705ca844507d177c3259cbea973b627083cc64b6b37cbcc0961a6464',1,'efa_rdm_pke.h']]],
+  ['efa_5frdm_5fpke_5ffrom_5funexp_5fpool',['EFA_RDM_PKE_FROM_UNEXP_POOL',['../efa__rdm__pke_8h.html#a9457b75b4705ca844507d177c3259cbea11217e6e0086aefcc87ba01e4edb5044',1,'efa_rdm_pke.h']]],
+  ['efa_5frdm_5fpke_5ffrom_5fuser_5fbuffer',['EFA_RDM_PKE_FROM_USER_BUFFER',['../efa__rdm__pke_8h.html#a9457b75b4705ca844507d177c3259cbea3826e399dd0db6325277a9eaf3a9e51c',1,'efa_rdm_pke.h']]],
+  ['efa_5frdm_5frdma_5fread_5fcontex',['EFA_RDM_RDMA_READ_CONTEX',['../efa__rdm__pke__nonreq_8h.html#a39785b4ed20f9ef7c0e6907220ac91e3ab12c365be266a85bf013ace86eb28b92',1,'efa_rdm_pke_nonreq.h']]],
+  ['efa_5frdm_5frdma_5fwrite_5fcontex',['EFA_RDM_RDMA_WRITE_CONTEX',['../efa__rdm__pke__nonreq_8h.html#a39785b4ed20f9ef7c0e6907220ac91e3aa00d0ee7ec73daba2f3bbe11ccdaf4ed',1,'efa_rdm_pke_nonreq.h']]],
+  ['efa_5frdm_5frxe',['EFA_RDM_RXE',['../efa__rdm__ope_8h.html#a3560fc43be30d9394c75582ad73c1e4ea283ee9d48b376f2ba4dddbc88001b198',1,'efa_rdm_ope.h']]],
+  ['efa_5frdm_5frxe_5finit',['EFA_RDM_RXE_INIT',['../efa__rdm__ope_8h.html#a6c9901821c399c33346c2a539e688a30a0709e08ce9b65224aa3da2d60a489989',1,'efa_rdm_ope.h']]],
+  ['efa_5frdm_5frxe_5fmatched',['EFA_RDM_RXE_MATCHED',['../efa__rdm__ope_8h.html#a6c9901821c399c33346c2a539e688a30a1754f19e6e9fcd2cfe7f9b74fb6eb61e',1,'efa_rdm_ope.h']]],
+  ['efa_5frdm_5frxe_5frecv',['EFA_RDM_RXE_RECV',['../efa__rdm__ope_8h.html#a6c9901821c399c33346c2a539e688a30a804793464095cfae2c76d05989523d75',1,'efa_rdm_ope.h']]],
+  ['efa_5frdm_5frxe_5funexp',['EFA_RDM_RXE_UNEXP',['../efa__rdm__ope_8h.html#a6c9901821c399c33346c2a539e688a30a6351d6db7d4eb41e6f52172fb95c182a',1,'efa_rdm_ope.h']]],
+  ['efa_5frdm_5ftxe',['EFA_RDM_TXE',['../efa__rdm__ope_8h.html#a3560fc43be30d9394c75582ad73c1e4ea504f600f59c06030e4fc9be918617c91',1,'efa_rdm_ope.h']]],
+  ['efa_5frdm_5ftxe_5freq',['EFA_RDM_TXE_REQ',['../efa__rdm__ope_8h.html#a6c9901821c399c33346c2a539e688a30a6edc952c1fffee5962bb6360d9c13846',1,'efa_rdm_ope.h']]],
+  ['efa_5frdm_5ftxe_5fsend',['EFA_RDM_TXE_SEND',['../efa__rdm__ope_8h.html#a6c9901821c399c33346c2a539e688a30a4c6f11bd54a0d7f75fb8c08f758d2c48',1,'efa_rdm_ope.h']]],
+  ['efadv_5fcq',['EFADV_CQ',['../efa__rdm__ep_8h.html#ac922e0bf12afbcd5fd1a918af49772bba8c93a08ab06d0c36551cc62777a64b4a',1,'efa_rdm_ep.h']]]
+];
