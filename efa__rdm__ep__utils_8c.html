@@ -543,7 +543,7 @@ Functions</h2></td></tr>
 <p>One may ask why this function is not integrated into efa_rdm_pke_relase_tx()?</p>
 <p>The reason is the action of decrease tx_op counter is not tied to releasing a TX pke.</p>
 <p>Sometimes we need to decreate the tx_op counter without releasing a TX pke. For example, we handle a TX pke encountered RNR. We need to decrease the tx_op counter and queue the packet.</p>
-<p>Sometimes we need release TX pke without decreasing the tx_op counter. For example, when <a class="el" href="efa__rdm__ope_8c.html#a2cb3828264b4abb9de76c27a28ecca57" title="post packet(s) according to packet type. ">efa_rdm_ope_post_send()</a> failed to post a pkt entry.</p>
+<p>Sometimes we need release TX pke without decreasing the tx_op counter. For example, when <a class="el" href="structefa__rdm__ope.html#a2cb3828264b4abb9de76c27a28ecca57" title="post packet(s) according to packet type. ">efa_rdm_ope_post_send()</a> failed to post a pkt entry.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">ep</td><td>endpoint </td></tr>
